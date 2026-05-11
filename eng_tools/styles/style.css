@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.root {
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Montserrat', sans-serif;
+  --color1:#646d75;
+  --color2:#466e91;
+  --color3:#148df7;
+  --color4:#40505e;
+  --color5:#2d3033;
+
+    
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 40
+}
+
+body{
+    background: var(--color3);
+}
+
+#logo{
+    color: var(--color3);
+    font-family: var(--font-primary);
+    font-weight: 700;
+    width: 50px;
+    height: 50px;
+}
