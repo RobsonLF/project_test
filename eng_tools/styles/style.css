@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-.root {
+:root {
   --font-primary: 'Inter', sans-serif;
   --font-secondary: 'Montserrat', sans-serif;
   --color1:#646d75;
@@ -10,8 +10,8 @@
   --color3:#148df7;
   --color4:#40505e;
   --color5:#2d3033;
-
-    
+  --color6:#646d7531;
+  --color7:#ffffff;
 }
 
 .material-symbols-outlined {
@@ -23,13 +23,53 @@
 }
 
 body{
-    background: var(--color3);
+    background: var(--color6);
 }
 
+main{
+  padding-top:80px;
+}
+
+#menu{
+  box-shadow: var(--color6) 1px 1px 10px;
+
+}
 #logo{
-    color: var(--color3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+    color: var(--color2);
     font-family: var(--font-primary);
     font-weight: 700;
     width: 50px;
     height: 50px;
+}
+
+.accordion-button:not(.collapsed){
+  background-color: var(--color2);
+  color:var(--color7);
+}
+
+.title-h1{
+    font-family: var(--font-secondary);
+    color: var(--color2);
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+}
+#title-h2{
+    font-family: var(--font-primary);
+    color: var(--color2);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#title-h2:not(.collapsed){
+  font-family: var(--font-primary);
+  color: var(--color7);
+  font-size: 24px;
+  font-weight: 700;
+}
+#accordionExample{
+  margin-bottom: 20px;
 }

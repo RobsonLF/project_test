@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENT</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>TOOLS</title>
     <link rel="icon" href="img/icone.png" type="image/x-icon">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
     
 </head>
 <body>
     <!--menu-->
     <header>
-        <nav class="navbar bg-body-tertiary">
+        <nav class="navbar fixed-top bg-body-tertiary" id="menu">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#" id="logo">
                     <img src="img/icone.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
@@ -22,7 +22,52 @@
             </div>
         </nav> 
     </header>
+    <main>
+        <section class="container">
+            <h1 class="title-h1">CALCULOS</h1>
+            <!--Calculo 1-->
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"  id="title-h2">
+                            CALCLIB
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><a href="#">Calculadora de Carga</a></li>
+                                <li><a href="#">Tabela de Materiais</a></li>
+                                <li><a href="#">Simulador de Estruturas</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Fim do Calculo 1-->
+            <!--Calculo 2-->
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"  id="title-h2">
+                            CALCLIB
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><a href="#">Calculadora de Carga</a></li>
+                                <li><a href="#">Tabela de Materiais</a></li>
+                                <li><a href="#">Simulador de Estruturas</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Fim do Calculo 2-->
+        </section>
 
+    </main>
 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
