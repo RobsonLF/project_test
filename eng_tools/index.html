@@ -33,13 +33,54 @@
                             CALCLIB
                         </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="collapseOne" class="accordion-collapse collapse">
                         <div class="accordion-body">
-                            <ul>
-                                <li><a href="#">Calculadora de Carga</a></li>
-                                <li><a href="#">Tabela de Materiais</a></li>
-                                <li><a href="#">Simulador de Estruturas</a></li>
-                            </ul>
+                            <div class="container"">   
+                                <div class="row"  id="inputCalc1">   
+                                    <div class="col-9">
+                                        <h3 class="title-h3"> </h3>
+                                        <form class="row row-cols-lg-auto g-3 align-items-center border border-1 border-secondary-subtle p-3 rounded-3">
+                                            <div class="col-6 w-50">
+                                                <label class="visually-hidden" for="inlineFormInputGroupUsername">Espessura</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text">#</div>
+                                                    <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Espessura">
+                                                </div>
+                                            </div>
+                                            <div class="col-6  w-50">
+                                                <label class="visually-hidden" for="inlineFormInputGroupUsername">Diâmetro Externo</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text">Ø</div>
+                                                    <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Diâmetro Externo">
+                                                </div>
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="row" id="tabelaDiam">
+                                    <div class="col-6">
+                                        <table class="table border border-2 border-secondary-subtle ">
+                                            <thead class="table-dark">
+                                                <tr>
+                                                    <th scope="col"></th>
+                                                    <th scope="col">Espessura</th>
+                                                    <th scope="col">Externo</th>
+                                                    <th scope="col">Interno</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class=""table-group-divider>
+                                                <tr>
+                                                    <th scope="row" class="table-dark">Diâmetro</th>
+                                                    <td>550</td>
+                                                    <td>1125</td>
+                                                    <td>2250</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -53,7 +94,7 @@
                             ÂNGULO E DIÂMETRO DE FECHAMENTO
                         </button>
                     </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="collapseTwo" class="accordion-collapse collapse">
                         <div class="accordion-body">
                             <ul>
                                 <li><a href="#">Calculadora de Carga</a></li>
