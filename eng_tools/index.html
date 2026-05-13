@@ -37,29 +37,29 @@
                         <div class="accordion-body">
                             <div class="container">   
                                 <!--Dados de diametro-->
-                                <div class="row"  id="inputCalc1">   
+                                <div class="row inputCalc1"  >   
                                     <div class="col-9">
                                         <h3 class="title-h3"> </h3>
                                         <form class="row row-cols-lg-auto g-3 align-items-center border border-1 border-secondary-subtle p-3 rounded-3">
                                             <div class="input-group mt-0 w-37">
                                                 <span class="input-group-text">Espessura</span>
-                                                <input type="text" class="form-control" aria-label="Esp.">
+                                                <input type="text" class="form-control" aria-label="Esp." id="espessura">
                                                 <span class="input-group-text">mm</span>
                                             </div>
                                             <div class="input-group mt-0 w-37">
                                                 <span class="input-group-text">Ø Externo</span>
-                                                <input type="text" class="form-control" aria-label="Ø Externo">
+                                                <input type="text" class="form-control" aria-label="Ø Externo" id="diamExt">
                                                 <span class="input-group-text">mm</span>
                                             </div>
 
                                             <div class="col-3 w-25 input-diametros">
-                                                <button type="button" class="btn btn-outline-primary w-100">Add Dados</button>
+                                                <button type="button" class="btn btn-outline-primary w-100" onclick="calcularDiametroInterno()">Add Dados</button>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
                                 <!--Dados de Formatos-->
-                                <div class="row"  id="inputCalc1">   
+                                <div class="row inputCalc1">   
                                     <div class="col-9">
                                         <h3 class="title-h3"> </h3>
                                         <form class="row row-cols-lg-auto g-3 align-items-center border border-1 border-secondary-subtle p-3 rounded-3">
@@ -92,7 +92,7 @@
                                 <!--Tabela de diametros e espessura-->
                                 <div class="row" id="tabelaDiam">
                                     <div class="col-9">
-                                        <table class="table border border-2 border-secondary-subtle ">
+                                        <table class="table border border-2 border-secondary-subtle" id="tbDiametros">
                                             <thead class="table-dark">
                                                 <tr>
                                                     <th scope="col"></th>
@@ -101,7 +101,7 @@
                                                     <th scope="col">Interno</th>
                                                 </tr>
                                             </thead>
-                                            <tbody class=""table-group-divider>
+                                            <tbody class="table-group-divider">
                                                 <tr>
                                                     <th scope="row" class="table-dark">Diâmetro</th>
                                                     <td>550</td>
@@ -112,7 +112,7 @@
                                         </table>
                                     </div>
                                     <div class="col-9">
-                                        <table class="table border border-2 border-secondary-subtle ">
+                                        <table class="table border border-2 border-secondary-subtle " id="tbTijolos">
                                             <thead class="table-dark">
                                                 <tr>
                                                     <th scope="col">#</th>
@@ -121,7 +121,7 @@
                                                     <th scope="col">Ø Fechamento</th>
                                                 </tr>
                                             </thead>
-                                            <tbody class=""table-group-divider>
+                                            <tbody class="table-group-divider">
                                                 <tr>
                                                     <th scope="row" class="table-secondary">1</th>
                                                     <td>550</td>
@@ -175,9 +175,48 @@
     </main>
 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+     <script>
+        function calcularDiametroInterno(){
+            const espessura = parseFloat(document.getElementById('espessura').value);
+            const diamExt = parseFloat(document.getElementById('diamExt').value);
+            const Tabela = document.getElementById('tbDiametros');
+            const linha = Tabela.tBodies[0].rows[0];
+            if (isNaN(espessura)){
+                window.alert('Por favor, insira um valor numérico válido para a espessura.');
+                document.getElementById('espessura').focus();
+                return;
+            }
+            if (isNaN(diamExt)) {
+                window.alert('Por favor, insira um valor numérico válido para o diâmetro externo.');
+                document.getElementById('diamExt').focus();
+                return;
+            }
+            const diamInt = diamExt - (2 * espessura);
+            if (diamInt <= 0) {
+                window.alert('O diâmetro interno calculado é inválido. Verifique os valores de espessura e diâmetro externo.');
+                document.getElementById('espessura').value = '';
+                document.getElementById('diamExt').value = '';
+                document.getElementById('espessura').focus();
+                return;
+            }
+                        
+            linha.cells[1].innerText = espessura;
+            linha.cells[2].innerText = diamExt;
+            linha.cells[3].innerText = diamInt;
+        }
+     </script>
 </body>
 </html>
 
 <!--
 <h1>ENT - Ferramentas de Engenharia</h1>
-<p>Bem-vindo à página de ferramentas de engenharia da ENT! Aqui você encontrará uma variedade de recursos e ferramentas úteis para engenheiros em diferentes disciplinas. Explore as opções abaixo para acessar as ferramentas disponíveis:</p>            -->
+<p>Bem-vindo à página de ferramentas de engenharia da ENT! Aqui você encontrará uma variedade de recursos e ferramentas úteis para engenheiros em diferentes disciplinas. Explore as opções abaixo para acessar as ferramentas disponíveis:</p>            
+            if(isNaN(espessura) || isNaN(diamExt)){
+                alert('Por favor, insira valores numéricos válidos para espessura e diâmetro externo.');
+                document.getElementById('espessura').focus();
+                return;
+            }
+
+
+-->
