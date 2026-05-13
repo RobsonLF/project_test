@@ -89,3 +89,11 @@ main{
 #inputCalc1{
   padding: 10px;
 }
+
+.input-diametros {
+  margin-top: 0;
+}
+
+.w-37{
+  width: 37.5% !important;
+}

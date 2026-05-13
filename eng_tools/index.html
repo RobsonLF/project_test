@@ -36,23 +36,52 @@
                     <div id="collapseOne" class="accordion-collapse collapse">
                         <div class="accordion-body">
                             <div class="container">   
+                                <!--Dados de diametro-->
                                 <div class="row"  id="inputCalc1">   
                                     <div class="col-9">
                                         <h3 class="title-h3"> </h3>
                                         <form class="row row-cols-lg-auto g-3 align-items-center border border-1 border-secondary-subtle p-3 rounded-3">
-                                            <div class="col-3 w-25">
-                                                <label class="visually-hidden" for="inlineFormInputGroupUsername">Espessura</label>
-                                                <div class="input-group">
-                                                    <div class="input-group-text">#</div>
-                                                    <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Espessura">
-                                                </div>
+                                            <div class="input-group mt-0 w-37">
+                                                <span class="input-group-text">Espessura</span>
+                                                <input type="text" class="form-control" aria-label="Esp.">
+                                                <span class="input-group-text">mm</span>
                                             </div>
-                                            <div class="col-6  w-50">
-                                                <label class="visually-hidden" for="inlineFormInputGroupUsername">Diâmetro Externo</label>
-                                                <div class="input-group">
-                                                    <div class="input-group-text">Ø</div>
-                                                    <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Diâmetro Externo">
-                                                </div>
+                                            <div class="input-group mt-0 w-37">
+                                                <span class="input-group-text">Ø Externo</span>
+                                                <input type="text" class="form-control" aria-label="Ø Externo">
+                                                <span class="input-group-text">mm</span>
+                                            </div>
+
+                                            <div class="col-3 w-25 input-diametros">
+                                                <button type="button" class="btn btn-outline-primary w-100">Add Dados</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!--Dados de Formatos-->
+                                <div class="row"  id="inputCalc1">   
+                                    <div class="col-9">
+                                        <h3 class="title-h3"> </h3>
+                                        <form class="row row-cols-lg-auto g-3 align-items-center border border-1 border-secondary-subtle p-3 rounded-3">
+                                            <div class="input-group mt-0 w-50">
+                                                <span class="input-group-text">Corda Externa</span>
+                                                <input type="text" class="form-control" aria-label="Corda Externa">
+                                                <span class="input-group-text">mm</span>
+                                            </div>
+                                            <div class="input-group mt-0 w-50">
+                                                <span class="input-group-text">Corda Interna</span>
+                                                <input type="text" class="form-control" aria-label="Corda Interna">
+                                                <span class="input-group-text">mm</span>
+                                            </div>
+                                            <div class="input-group mt-3 w-50">
+                                                <span class="input-group-text">Ângulo</span>
+                                                <input type="text" class="form-control" aria-label="Ângulo">
+                                                <span class="input-group-text">°</span>
+                                            </div>
+                                            <div class="input-group mt-3 w-25">
+                                                <span class="input-group-text">Junta</span>
+                                                <input type="text" class="form-control" aria-label="Junta">
+                                                <span class="input-group-text">mm</span>
                                             </div>
                                             <div class="col-3 w-25">
                                                 <button type="button" class="btn btn-outline-primary w-100">Add Dados</button>
@@ -60,6 +89,9 @@
                                         </form>
                                     </div>
                                 </div>
+
+
+                                <!--Tabela de diametros e espessura-->
                                 <div class="row" id="tabelaDiam">
                                     <div class="col-6">
                                         <table class="table border border-2 border-secondary-subtle ">
@@ -74,6 +106,38 @@
                                             <tbody class=""table-group-divider>
                                                 <tr>
                                                     <th scope="row" class="table-dark">Diâmetro</th>
+                                                    <td>550</td>
+                                                    <td>1125</td>
+                                                    <td>2250</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-6">
+                                        <table class="table border border-2 border-secondary-subtle ">
+                                            <thead class="table-dark">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Corda Externa</th>
+                                                    <th scope="col">Corda Interna</th>
+                                                    <th scope="col">Ø Fechamento</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class=""table-group-divider>
+                                                <tr>
+                                                    <th scope="row" class="table-secondary">1</th>
+                                                    <td>550</td>
+                                                    <td>1125</td>
+                                                    <td>2250</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="table-secondary">2</th>
+                                                    <td>550</td>
+                                                    <td>1125</td>
+                                                    <td>2250</td>
+                                                </tr>
+                                                    <tr>
+                                                    <th scope="row" class="table-secondary">3</th>
                                                     <td>550</td>
                                                     <td>1125</td>
                                                     <td>2250</td>
