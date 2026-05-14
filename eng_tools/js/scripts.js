@@ -1,10 +1,12 @@
 
 const btnDiam = document.getElementById('btnAddDiam');
 const btnFechamento = document.getElementById('btnAddTijolos');
+const btnLimparTijolos = document.getElementById('btnLimparTijolos');
 
 
 btnDiam.addEventListener('click', calcularDiametroInterno);
 btnFechamento.addEventListener('click', calcularfechamento);
+btnLimparTijolos.addEventListener('click', limparTabelaTijolos);
 
 // ################################## FUNÇÃO CALCULAR DIÂMETRO INTERNO ################################################################ 
 
@@ -79,10 +81,15 @@ function calcularfechamento(){
     <td>${cordaInt}</td>
     <td>${fechamento.toFixed(2)}</td>
     `;
-    Tabela.appendChild(linha);
+    Tabela.tBodies[0].appendChild(linha);
     document.getElementById('cordaExterna').value = '';
     document.getElementById('cordaInterna').value = '';
     document.getElementById('cordaExterna').focus();
+}
+
+function limparTabelaTijolos(){
+    const Tabela = document.getElementById('tbTijolos');
+    Tabela.tBodies[0].innerHTML = '';
 }
 
 
