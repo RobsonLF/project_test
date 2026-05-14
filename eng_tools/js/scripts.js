@@ -89,7 +89,11 @@ function calcularfechamento(){
 
 function limparTabelaTijolos(){
     const Tabela = document.getElementById('tbTijolos');
-    Tabela.tBodies[0].innerHTML = '';
+    const corpoTabela = Tabela.tBodies[0];
+
+    if (corpoTabela.rows.length > 0) {
+        corpoTabela.deleteRow(-1);
+    }
 }
 
 
