@@ -8,6 +8,7 @@ btnDiam.addEventListener('click', calcularDiametroInterno);
 btnFechamento.addEventListener('click', calcularfechamento);
 btnLimparTijolos.addEventListener('click', limparTabelaTijolos);
 
+
 // ################################## FUNÇÃO CALCULAR DIÂMETRO INTERNO ################################################################ 
 
 function calcularDiametroInterno(){

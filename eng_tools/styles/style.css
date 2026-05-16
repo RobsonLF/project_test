@@ -97,3 +97,20 @@ main{
 .w-37{
   width: 37.5% !important;
 }
+
+.cards-grid {
+  width: 100%;
+  --cards-gap: 1rem;
+}
+
+.cards-grid .card {
+  flex: 1 1 calc((100% - (var(--cards-gap) * 2)) / 3);
+  min-width: 18rem;
+  max-width: none !important;
+}
+
+@media (max-width: 768px) {
+  .cards-grid .card {
+    flex-basis: 100%;
+  }
+}
