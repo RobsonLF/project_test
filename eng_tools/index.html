@@ -51,9 +51,6 @@
                                                 <input type="text" class="form-control" aria-label="Ø Externo" id="diamExt">
                                                 <span class="input-group-text">mm</span>
                                             </div>
-                                            <div class="col-3 w-25 input-diametros">
-                                                <button type="button" class="btn btn-outline-primary ms-4 w-75" id="btnAddDiam">Add Dados</button>
-                                            </div>
                                             <div class="input-group mt-3 w-50">
                                                 <span class="input-group-text">Ângulo</span>
                                                 <input type="text" class="form-control" aria-label="Ângulo" id="angulo">
@@ -64,7 +61,9 @@
                                                 <input type="text" class="form-control" aria-label="Junta" id="junta">
                                                 <span class="input-group-text">mm</span>
                                             </div>
-                                            
+                                            <div class="col-3 w-25 mt-3 input-diametros">
+                                                <button type="button" class="btn btn-outline-primary ms-0 w-75" id="btnAddDiam">Add Dados</button>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
@@ -120,6 +119,9 @@
                                     <div class="col-12 w-37 d-flex justify-content-center mb-3 mt-0 mx-auto">
                                         <button type="button" class="btn btn-success w-75" id="btnCalcularComp">CALCULAR</button>
                                     </div>
+                                    <div class="col-12 w-37 d-flex justify-content-center mb-3 mt-0 mx-auto">
+                                        <button type="button" class="btn btn-warning w-100" id="btnlimparCalculo">APAGAR</button>
+                                    </div>
                                             
                                     <div class="col-12">
                                         <table class="table border border-2 border-secondary-subtle " id="tbTijolos">
@@ -138,15 +140,7 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="cards-grid d-flex flex-wrap gap-3">
-                                            <div class="card border-success mb-3" style="max-width: 18rem;">
-                                                <div class="card-header bg-transparent border-success">Header</div>
-                                                <div class="card-body text-success">
-                                                    <h5 class="card-title">Success card title</h5>
-                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                                                </div>
-                                                
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -193,6 +187,14 @@
                 document.getElementById('espessura').focus();
                 return;
             }
-
+                                            <div class="card border-success mb-3" style="max-width: 18rem;">
+                                                <div class="card-header bg-transparent border-success">Header</div>
+                                                <div class="card-body text-success">
+                                                    <h5 class="card-title">Success card title</h5>
+                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                                </div>
+                                                
+                                            </div>
 
 -->
